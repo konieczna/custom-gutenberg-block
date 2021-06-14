@@ -1,0 +1,12 @@
+{
+  "name": "psd2css",
+  "version": "1.0.0",
+  "description": "PSD2CSS theme",
+  "author": "Magda",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}

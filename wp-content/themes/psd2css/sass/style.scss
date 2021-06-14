@@ -1,0 +1,261 @@
+$color1: #FFFFFF;
+$color2: #215398;
+$color3: #2D3236;
+$p-color: #808080;
+$light: #F1F6FC;
+$color4: #FF3859;
+body {
+  background-color: $color1;
+  font-family: 'Rubik', sans-serif;
+}
+.post, .page {
+  margin: 0;
+}
+::selection {
+  color: $color1;
+  background-color: $color4;
+}
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+.site-header {
+  padding: 23px 0;
+  .site-branding {
+    a {
+      position: relative;
+      left: -65px;
+    }
+  }
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+h3 {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: $color3;
+}
+p {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+}
+.section-1 {
+  padding: 49px 0 60px 0;
+  background-color: $color2;
+  &__content {
+    h2 {
+      color: $color1;
+    }
+    p {
+      color: $color1;
+      margin-bottom: 0;
+    }
+    margin-bottom: 40px;
+  }
+}
+
+.section-2 {
+  background-color: $light;
+  padding: 49px 0 72px 0;
+  position: relative;
+  &::before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    background-color: $color4;
+    box-shadow: 0px 4px 4px rgba(255, 56, 89, 0.2);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    content: '';
+  }
+  &__content {
+    margin-bottom: 24px;
+    h2, p {
+      color: $color3;
+    }
+    p {
+      margin-bottom: 36px;
+    }
+    h2 {
+      margin-bottom: 3px;
+    }
+    span {
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 30px;
+      text-align: center;
+      color: $color3;
+      display: block;
+    }
+  }
+  &__box {
+    margin-right: -10px;
+    margin-left: -10px;
+    .col-12 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+.swiper-somecontent .swiper-slide , .section-2__box__item {
+
+    padding: 36px 28px;
+    background-color: $color1;
+    height: 100%;
+    h3 {
+      margin-bottom: 12px;
+    }
+    p {
+      color: $p-color;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 24px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    figure {
+      text-align: center;
+    }
+
+}
+
+.swiper-button-next, .swiper-button-prev {
+  svg {
+    circle {
+      display: none;
+    }
+  }
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    content: '';
+    transition: .3s;
+  }
+  &:hover {
+    &::before {
+      transition: .3s;
+      opacity: 1;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+  &::after {
+    content: '';
+    width: 48px;
+    height: 48px;
+    background-size: cover;
+    transition: 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.swiper-button-next {
+  right: -40px;
+  &::after {
+    background: url('/psd2css-task/wp-content/themes/psd2css/assets/svg/rightArrow.svg');
+  }
+}
+
+.swiper-button-prev {
+  left: -40px;
+  &::after {
+    background: url('/psd2css-task/wp-content/themes/psd2css/assets/svg/leftArrow.svg');
+  }
+}
+.swiper-container-autoheight, .swiper-container-autoheight .swiper-slide {
+  height: 100%;
+}
+@media screen and (max-width: 1300px) {
+  .site-header {
+    .site-branding {
+      a {
+        left: unset;
+      }
+    }
+  }
+  .swiper-button-next {
+    right: -20px;
+  }
+  .swiper-button-prev{
+    left: -20px;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    &::before {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-2 {
+    &__box {
+      .col-12 {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .swiper-button-next {
+    right: 15px;
+  }
+  .swiper-button-prev {
+    left: 15px;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    &::before {
+      content: none;
+    }
+  }
+  h2 {
+    font-size: 34px;
+    line-height: 46px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .section-2 {
+    padding: 49px 0 52px 0;
+    &__content {
+      span {
+        font-size: 26px;
+      }
+    }
+  }
+  .site-header {
+    padding: 15px 0;
+  }
+}
+.cta-container {
+  border: 1px solid $p-color;
+  padding: 10px;
+}
