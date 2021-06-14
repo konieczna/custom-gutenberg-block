@@ -181,14 +181,14 @@ p {
 .swiper-button-next {
   right: -40px;
   &::after {
-    background: url('/psd2css-task/wp-content/themes/psd2css/assets/svg/rightArrow.svg');
+    background: url('/wp-content/themes/psd2css/assets/svg/rightArrow.svg');
   }
 }
 
 .swiper-button-prev {
   left: -40px;
   &::after {
-    background: url('/psd2css-task/wp-content/themes/psd2css/assets/svg/leftArrow.svg');
+    background: url('/wp-content/themes/psd2css/assets/svg/leftArrow.svg');
   }
 }
 .swiper-container-autoheight, .swiper-container-autoheight .swiper-slide {
